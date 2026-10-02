@@ -1,0 +1,23 @@
+@startuml
+
+class Persona {
+  id: number
+  alias: string
+  activa: boolean
+}
+
+class Preferencias {
+  maxConversaciones: number
+  noMolestar: boolean
+}
+
+class Idiomas {
+  codigo: string
+  rol: string
+  nivel: string
+}
+
+Persona "1" -- "1" Preferencias : tiene
+Persona "1" -- "1..*" Idiomas : habla/aprende
+
+@enduml
